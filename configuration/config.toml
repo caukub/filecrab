@@ -1,0 +1,12 @@
+[application]
+host = "127.0.0.1"
+port = 8080
+date_format = "%Y-%m-%d %H:%M:%S"
+
+[database]
+url = "postgres://postgres:mysecretpassword@localhost:5432/filecrab"
+
+[localization]
+default = "en"
+method = ["header"]
+redirect = { sk = "cs" }

@@ -1,0 +1,35 @@
+[package]
+name = "file_manager"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "file_manager"
+path = "src/main.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0.86"
+axum = { version = "0.7.5", features = ["macros"] }
+chrono = "0.4.38"
+config = "0.14.0"
+fluent = "0.16.1"
+intl-memoizer = "0.5.2"
+secrecy = { version = "0.8.0", features = ["serde"] }
+serde = { version = "1.0.205", features = ["derive"] }
+sqlx = { version = "0.8.2", features = ["runtime-tokio-rustls", "any", "postgres"] }
+tokio = { version = "1.39.2", features = ["rt-multi-thread", "net", "fs"] }
+tower-http = { version = "0.5.2", features = ["request-id", "trace", "cors"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter", "ansi", "std", "json", "fmt", "registry"] }
+unic-langid = { version = "0.9.5", features = ["macros"] }
+uuid = { version = "1.10.0", features = ["serde", "v4"] }
+url = "2.5.2"
+flate2 = "1.0.33"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
