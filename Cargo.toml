@@ -1,10 +1,10 @@
 [package]
-name = "file_manager"
+name = "filecrab"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "file_manager"
+name = "filecrab"
 path = "src/main.rs"
 
 [lib]

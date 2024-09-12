@@ -3,12 +3,12 @@
 use axum::handler::Handler;
 use axum::routing::MethodRouter;
 use axum::Router;
-use file_manager::authorization::{auth_middleware, Permission};
-use file_manager::configuration::{get_configuration, Settings};
-use file_manager::localization::get_locales;
-use file_manager::routes::create::{create_directory, create_file};
-use file_manager::routes::LocalizerState;
-use file_manager::tracing::{create_trace_layer, init_tracing};
+use filecrab::authorization::{auth_middleware, Permission};
+use filecrab::configuration::{get_configuration, Settings};
+use filecrab::localization::get_locales;
+use filecrab::routes::create::{create_directory, create_file};
+use filecrab::routes::LocalizerState;
+use filecrab::tracing::{create_trace_layer, init_tracing};
 use std::convert::Infallible;
 use std::net::SocketAddr;
 use std::str::FromStr;
